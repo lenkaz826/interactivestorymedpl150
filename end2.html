@@ -2,39 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ending B — False Warmth</title>
+    <title>False Warmth</title>
     <style>
         body {
-            background-color: #000;
-            color: #fff;
-            font-family: "Helvetica Neue", Arial, sans-serif;
+            background: radial-gradient(circle, #1a130d 0%, #000 65%);
+            color: #f5e9d6;
+            font-family: "Georgia", serif;
             text-align: center;
             padding: 40px;
         }
-        img {
-            width: 80%;
-            max-width: 900px;
-            border-radius: 6px;
-            margin-bottom: 30px;
+        .frame {
+            padding:12px; display:inline-block;
+            border-radius:14px;
+            background: radial-gradient(circle, rgba(255,200,120,.15), rgba(0,0,0,.9));
+            box-shadow:0 0 60px rgba(255,180,100,.4);
+            animation:pulse 4s infinite alternate;
+            margin-bottom:40px;
         }
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 40px;
+        .frame img {
+            width:85%; max-width:900px; border-radius:10px;
         }
+        @keyframes pulse {
+            0% { box-shadow:0 0 20px rgba(255,180,100,.3); }
+            100% { box-shadow:0 0 90px rgba(255,180,100,.55); }
+        }
+        a.choice {
+            display:inline-block;
+            padding:10px 22px;
+            border-radius:6px;
+            border:2px solid #ffd27f;
+            text-decoration:none;
+            color:#ffd27f;
+            background:rgba(0,0,0,.4);
+            transition:.3s;
+        }
+        a.choice:hover { background:#ffd27f; color:#000; }
     </style>
 </head>
 
 <body>
 
-    <h1>False Warmth</h1>
+<h1>False Warmth</h1>
 
-    <!-- Replace image5.jpg with your actual lantern image file -->
-    <img src="image5.JPEG" alt="Warm lantern on the stairs">
+<div class="frame">
+    <img src="image5.JPEG" alt="Lantern stairs">
+</div>
 
-    <p>A warm lantern glows at the top of the steps…</p>
-    <p>You walk toward it.</p>
-    
+<p>A warm lantern glows at the top of the steps… it's cozy, but... <br><br>
+You walk toward it.
+</p>
+
+<a class="choice" href="index.html">Dead End — Back to Start</a>
 
 </body>
 </html>
