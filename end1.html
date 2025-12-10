@@ -2,37 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ending A — Soft Resolution</title>
+    <title>Soft Resolution</title>
     <style>
         body {
-            background-color: #000;
-            color: #fff;
-            font-family: "Helvetica Neue", Arial, sans-serif;
+            background: radial-gradient(circle, #1a1d12 0%, #000 60%);
+            color: #fafafa;
+            font-family: "Georgia", serif;
             text-align: center;
             padding: 40px;
         }
-        img {
-            width: 80%;
-            max-width: 900px;
-            border-radius: 6px;
-            margin-bottom: 30px;
+
+        .frame {
+            padding:12px; display:inline-block;
+            border-radius:14px;
+            background: radial-gradient(circle, rgba(255,240,180,.2), rgba(0,0,0,.9));
+            box-shadow:0 0 50px rgba(255,240,180,.4);
+            animation:pulse 4s infinite alternate;
+            margin-bottom:40px;
         }
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 40px;
+        .frame img { width:85%; max-width:900px; border-radius:10px; }
+
+        @keyframes pulse {
+            0% { box-shadow:0 0 30px rgba(255,240,180,.3); }
+            100% { box-shadow:0 0 90px rgba(255,240,180,.6); }
         }
+
+        a.choice {
+            display:inline-block;
+            padding:10px 22px;
+            border:2px solid #ffd27f;
+            text-decoration:none;
+            color:#ffd27f;
+            border-radius:6px;
+            background:rgba(0,0,0,.4);
+            transition:.3s;
+        }
+        a.choice:hover { background:#ffd27f; color:#000; }
     </style>
 </head>
 
 <body>
 
-    <h1>Soft Resolution</h1>
+<h1>Soft Resolution</h1>
 
-    <!-- Replace image6.jpg with your actual file -->
-    <img src="image6.jpg.JPEG" alt="Open doorway with daylight">
+<div class="frame">
+    <img src="image6.jpg.JPEG" alt="Sunlit exit">
+</div>
 
-    <p>The staircase leads you to an open door, sunlight pouring through…</p>
+<p>The staircase leads you to an open door. Is that a sunlight?</p>
+
+<a class="choice" href="index.html">Dead End — Back to Start</a>
 
 </body>
 </html>
