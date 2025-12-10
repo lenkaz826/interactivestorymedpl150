@@ -6,99 +6,58 @@
     <style>
         body {
             margin: 0;
-            background:
-                radial-gradient(circle at top, #181d22 0%, #05060a 40%, #000000 100%);
+            background: radial-gradient(circle at top, #141416 0%, #050709 40%, #000);
             color: #f5f5f5;
-            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-family: "Georgia", serif;
             text-align: center;
             padding: 40px 20px;
         }
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            letter-spacing: 0.08em;
-        }
-        p {
-            font-size: 1.15rem;
-            line-height: 1.7;
-            margin-bottom: 40px;
-            color: #d4d4d4;
-        }
-        .image-frame {
+
+        .frame {
             display: inline-block;
-            padding: 10px;
+            padding: 12px;
             border-radius: 14px;
-            background: radial-gradient(circle at center,
-                    rgba(210, 240, 255, 0.16),
-                    rgba(0, 0, 0, 0.95));
-            box-shadow:
-                0 0 40px rgba(210, 240, 255, 0.45),
-                0 0 120px rgba(130, 180, 255, 0.6);
-            animation: glowPulse 4.5s ease-in-out infinite alternate;
-            margin-bottom: 35px;
+            background: radial-gradient(circle, rgba(255,255,200,.15), rgba(0,0,0,.9));
+            box-shadow: 0 0 40px rgba(255,255,180,.3), 0 0 120px rgba(200,200,100,.45);
+            animation: pulse 4s infinite alternate;
+            margin-bottom: 40px;
         }
-        .image-frame img {
-            display: block;
-            width: 80%;
+        .frame img {
+            width: 85%;
             max-width: 900px;
             border-radius: 10px;
         }
-        @keyframes glowPulse {
-            0% {
-                box-shadow:
-                    0 0 25px rgba(210, 240, 255, 0.25),
-                    0 0 70px rgba(130, 180, 255, 0.35);
-            }
-            50% {
-                box-shadow:
-                    0 0 45px rgba(230, 255, 255, 0.6),
-                    0 0 140px rgba(160, 210, 255, 0.8);
-            }
-            100% {
-                box-shadow:
-                    0 0 30px rgba(210, 240, 255, 0.4),
-                    0 0 90px rgba(130, 180, 255, 0.55);
-            }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 25px rgba(255,255,200,.2); }
+            100% { box-shadow: 0 0 90px rgba(255,255,200,.55); }
         }
-        .choices {
-            margin-top: 10px;
-        }
+
         a.choice {
             display: inline-block;
-            margin: 10px 12px;
+            margin: 10px;
             color: #ffd27f;
-            font-size: 1.1rem;
-            text-decoration: none;
             border: 2px solid #ffd27f;
-            padding: 9px 20px;
+            padding: 10px 24px;
+            text-decoration: none;
             border-radius: 6px;
-            transition: 0.25s;
-            letter-spacing: 0.05em;
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(0,0,0,.4);
+            transition: .3s;
         }
-        a.choice:hover {
-            background-color: #ffd27f;
-            color: #000;
-            transform: translateY(-2px);
-            box-shadow: 0 0 18px rgba(255, 210, 127, 0.6);
-        }
+        a.choice:hover { background:#ffd27f; color:#000; }
     </style>
 </head>
-
 <body>
 
-    <h1>The Light That Knows Your Name</h1>
+<h1>The Light That Knows Your Name</h1>
 
-    <div class="image-frame">
-        <img src="image2.jpg.JPG" alt="Staircase toward bright opening">
-    </div>
+<div class="frame">
+    <img src="image2.jpg.JPG" alt="Bright staircase">
+</div>
 
-    <p>As you climb, the space becomes brighter… unnaturally bright…</p>
+<p>As you climb, the space becomes brighter… unnaturally bright…</p>
 
-    <div class="choices">
-        <a class="choice" href="end1.html">Walk toward bright opening</a>
-        <a class="choice" href="page3.html">Look behind you</a>
-    </div>
+<a class="choice" href="end1.html">Walk toward bright opening</a>
+<a class="choice" href="page3.html">Look behind you</a>
 
 </body>
 </html>
