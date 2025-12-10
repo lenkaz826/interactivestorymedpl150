@@ -30,7 +30,7 @@
             padding: 80px 20px 60px;
         }
 
-        /* Cinematic lens flare behind the title */
+        /* Cinematic lens flare behind title */
         .lensflare {
             position: absolute;
             top: 0;
@@ -55,18 +55,9 @@
         }
 
         @keyframes flarePulse {
-            0% {
-                transform: translate(-50%, -40%) scale(0.9);
-                opacity: 0.6;
-            }
-            50% {
-                transform: translate(-50%, -40%) scale(1.1);
-                opacity: 1;
-            }
-            100% {
-                transform: translate(-50%, -40%) scale(0.9);
-                opacity: 0.6;
-            }
+            0% { transform: translate(-50%, -40%) scale(0.9); opacity: 0.6; }
+            50% { transform: translate(-50%, -40%) scale(1.1); opacity: 1; }
+            100% { transform: translate(-50%, -40%) scale(0.9); opacity: 0.6; }
         }
 
         h1 {
@@ -75,30 +66,26 @@
             margin: 0 0 40px;
         }
 
-        .start-btn {
+        /* ✨ SAME BUTTON STYLE AS YOUR OTHER PAGES */
+        .choice {
             display: inline-block;
-            margin-top: 10px;
-            padding: 12px 28px;
+            margin-top: 15px;
+            padding: 12px 24px;
             font-size: 1.2rem;
             font-weight: 600;
-            letter-spacing: 0.03em;
-            color: #ffd27f;
             text-decoration: none;
-            border-radius: 999px;
+            color: #ffd27f;
             border: 2px solid #ffd27f;
-            background: rgba(0, 0, 0, 0.3);
-            box-shadow: 0 0 18px rgba(255, 210, 127, 0.35);
-            transition: background 0.25s ease, color 0.25s ease,
-                        box-shadow 0.25s ease, transform 0.25s ease;
+            border-radius: 8px;
+            transition: 0.3s ease;
         }
 
-        .start-btn:hover {
+        .choice:hover {
             background: #ffd27f;
             color: #000;
             box-shadow:
-                0 0 24px rgba(255, 210, 127, 0.7),
-                0 0 60px rgba(255, 180, 90, 0.5);
-            transform: translateY(-2px);
+                0 0 15px rgba(255, 210, 127, 0.7),
+                0 0 40px rgba(255, 180, 90, 0.45);
         }
     </style>
 </head>
@@ -109,7 +96,8 @@
 
         <h1>Welcome, your journey begins here.</h1>
 
-        <a class="start-btn" href="page1.html">Open Me →</a>
+        <!-- Matching button -->
+        <a class="choice" href="page1.html">Open Me →</a>
     </div>
 </body>
 </html>
