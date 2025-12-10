@@ -1,38 +1,53 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ending C — Dissociation</title>
+    <title>Dissociation</title>
     <style>
         body {
-            background-color: #000;
-            color: #fff;
-            font-family: "Helvetica Neue", Arial, sans-serif;
+            background: radial-gradient(circle, #0c1019 0%, #000 60%);
+            color: #e8e8e8;
+            font-family: "Georgia", serif;
             text-align: center;
             padding: 40px;
         }
-        img {
-            width: 80%;
-            max-width: 900px;
-            border-radius: 6px;
-            margin-bottom: 30px;
+        .frame {
+            padding:12px; display:inline-block;
+            border-radius:14px;
+            background: radial-gradient(circle, rgba(180,220,255,.12), rgba(0,0,0,.9));
+            box-shadow:0 0 70px rgba(140,180,255,.4);
+            animation:pulse 4s infinite alternate;
+            margin-bottom:40px;
         }
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 40px;
+        .frame img { width:85%; max-width:900px; border-radius:10px; }
+        @keyframes pulse {
+            0% { box-shadow:0 0 30px rgba(140,180,255,.3); }
+            100% { box-shadow:0 0 110px rgba(140,180,255,.55); }
         }
+        a.choice {
+            padding:10px 22px;
+            border:2px solid #ffd27f;
+            color:#ffd27f;
+            text-decoration:none;
+            border-radius:6px;
+            background:rgba(0,0,0,.4);
+            transition:.3s;
+        }
+        a.choice:hover { background:#ffd27f;color:#000; }
     </style>
 </head>
 
 <body>
 
-    <h1>Dissociation</h1>
+<h1>Dissociation</h1>
 
-    <img src="image7.jpg.JPEG" alt="Spiral Stairs">
+<div class="frame">
+    <img src="image7.jpg.JPEG" alt="Spiral staircase">
+</div>
 
-    <p>The stairs twist into impossible shapes… There is no ending.</p>
+<p>The stairs twist into impossible shapes…<br><br>There is no ending.</p>
+
+<a class="choice" href="index.html">Dead End — Back to Start</a>
 
 </body>
 </html>
