@@ -66,7 +66,7 @@
             margin: 0 0 40px;
         }
 
-        /* ✨ SAME BUTTON STYLE AS YOUR OTHER PAGES */
+        /* Main choice button */
         .choice {
             display: inline-block;
             margin-top: 15px;
@@ -87,6 +87,24 @@
                 0 0 15px rgba(255, 210, 127, 0.7),
                 0 0 40px rgba(255, 180, 90, 0.45);
         }
+
+        /* 🔒 Subtle reflection link */
+        .reflection-link {
+            position: fixed;
+            bottom: 14px;
+            right: 16px;
+            font-size: 0.6rem;
+            letter-spacing: 0.12em;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.25);
+            opacity: 0.3;
+            transition: 0.3s ease;
+        }
+
+        .reflection-link:hover {
+            opacity: 1;
+            color: #ffd27f;
+        }
     </style>
 </head>
 
@@ -96,8 +114,12 @@
 
         <h1>Welcome, your journey begins here.</h1>
 
-        <!-- Matching button -->
+        <!-- Main story entry -->
         <a class="choice" href="page1.html">Open Me →</a>
     </div>
+
+    <!-- Hidden reflection access -->
+    <a href="reflection.html" class="reflection-link">reflection</a>
+
 </body>
 </html>
