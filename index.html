@@ -88,22 +88,41 @@
                 0 0 40px rgba(255, 180, 90, 0.45);
         }
 
-        /* 🔒 Subtle reflection link */
+        /* Small but visible reflection button */
         .reflection-link {
             position: fixed;
-            bottom: 14px;
-            right: 16px;
-            font-size: 0.6rem;
-            letter-spacing: 0.12em;
+            bottom: 18px;
+            right: 18px;
+            font-size: 0.75rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
             text-decoration: none;
-            color: rgba(255, 255, 255, 0.25);
-            opacity: 0.3;
+
+            color: #ffd27f;
+            opacity: 0.75;
+
+            border: 1px solid rgba(255, 210, 127, 0.6);
+            padding: 6px 10px;
+            border-radius: 6px;
+
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(4px);
+
+            box-shadow:
+                0 0 6px rgba(255, 210, 127, 0.35),
+                0 0 18px rgba(255, 180, 90, 0.2);
+
             transition: 0.3s ease;
+            z-index: 999;
         }
 
         .reflection-link:hover {
             opacity: 1;
-            color: #ffd27f;
+            background: rgba(255, 210, 127, 0.85);
+            color: #000;
+            box-shadow:
+                0 0 12px rgba(255, 210, 127, 0.9),
+                0 0 28px rgba(255, 180, 90, 0.6);
         }
     </style>
 </head>
@@ -114,12 +133,11 @@
 
         <h1>Welcome, your journey begins here.</h1>
 
-        <!-- Main story entry -->
         <a class="choice" href="page1.html">Open Me →</a>
     </div>
 
-    <!-- Hidden reflection access -->
-    <a href="reflection.html" class="reflection-link">reflection</a>
+    <!-- Reflection side button -->
+    <a href="reflection.html" class="reflection-link">Reflection</a>
 
 </body>
 </html>
